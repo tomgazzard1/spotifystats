@@ -14,8 +14,8 @@ RSpotify.authenticate("26de21a595844eae9e9f300a1fbba5b1", "8fbafb6e75a54b348a312
         
     def index
         spotify_user = RSpotify::User.find('1251329358')
-        spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
-        @top_tracks = me.top_tracks(((limit: 10, offset: 0, time_range: 'short_term')))
+        #spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
+        @top_tracks = spotify_user.top_tracks #(((limit: 10, offset: 0, time_range: 'short_term')))
     end
 
 end
