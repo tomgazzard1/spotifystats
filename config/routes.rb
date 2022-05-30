@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   resources "sessions"
   resources "users"
   resources "tracks"
+
+  # config/routes.rb
+get '/auth/spotify/callback', to: 'users#spotify'
+
 end
