@@ -1,3 +1,8 @@
 <h1>Top Tracks This Month</h1>
 
-<%= link_to 'Sign in with Spotify', '/auth/spotify', method: :post %>
+<ul>
+  <% for track in @top_tracks %>
+    <li> <%= track.inspect %> </li>
+  <% end %>
+</ul>
+

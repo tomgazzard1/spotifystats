@@ -3,5 +3,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     puts "------------------ code before every request ------------------"
+    @spotify_user = session["spotify_user"]
   end
 end
+

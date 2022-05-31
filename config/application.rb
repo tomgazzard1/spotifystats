@@ -13,6 +13,8 @@ require "action_controller/railtie"
 require "action_view/railtie"
 # require "action_cable/engine"
 # require "rails/test_unit/railtie"
+# require 'rspotify/oauth'
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -39,5 +41,10 @@ module StarterApp
     
     # Disable strong parameters in all environments
     config.action_controller.permit_all_parameters = true
+
+    # config/application.rb
+    RSpotify.authenticate("26de21a595844eae9e9f300a1fbba5b1", "8fbafb6e75a54b348a312325e698a8d2")
   end
 end
+
+

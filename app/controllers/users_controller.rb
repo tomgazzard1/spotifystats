@@ -7,6 +7,5 @@ class UsersController < ApplicationController
     spotify_user.top_artists #=> (Artist array)
     spotify_user.top_tracks(time_range: 'short_term') #=> (Track array)
 
-    # Check doc for more
   end
 end
